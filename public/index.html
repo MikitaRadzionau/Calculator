@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>КУКУ_ЛЯТОР</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<!--  -->
+<body>
+    
+    <div class="container">
+        <input type="number" id="numberInput1" placeholder=" число 1" />
+        <input type="number" id="numberInput2" placeholder=" число 2" />
+        <div class="commands">
+            <input  type="text" id="OperInput" placeholder="special command" list="options"name="display"/>
+            <datalist id="options">
+                <option value="+"></option>
+                <option value="-"></option>
+                <option value="*"></option>
+                <option value="/"></option>
+                <option value="sqrt"></option>
+                <option value="degree"></option>
+                <option value="%"></option>
+                <option value="sqrt"></option>
+            </datalist>
+        </div>
+        <!-- <div class="commands">
+            <input type="button" value="+" onclick="display.value='+'">
+            <input type="button" value="-" onclick="display.value='-'">
+            <input type="button" value="*" onclick="display.value='*'">
+            <input type="button" value="/" onclick="display.value='/'">
+        </div> -->
+        <div class="commands">
+            <button onclick="sendUserDataPOST()" >P</button>
+            <button onclick="sendUserDataGET()" ><a href="/calc?a=13&b=13&op=minus">G</a></button>
+        </div>
+
+        <div class="lower">
+            <div class="l-1">
+                <p>Result:</p>
+            </div>
+            <div class="l-2">
+                <div><input name="res" type="text" id="outputNumber" readonly /></div>
+            </div>
+        </div>
+           <!-- history divs -->
+            <div class="hist">
+                <button class="btn">History</button>
+                <button class="btn" id="btnClear">Clear History</button>
+            </div>
+    </div>
+
+        <div class="element">
+            <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; letter-spacing: 5px;margin-left: 10px;">History Math:</h1>
+            <div id="out">
+                <div id="result"></div>
+            </div>
+        </div>
+
+
+
+<script src="./js/js.js"></script>
+
+</body>
+</html>
